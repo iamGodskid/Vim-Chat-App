@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=0.5"/>
+        <meta http-equiv="X-UA-Compactible" content="ie.edge"/>
+        <title>CHAT APP</title>
+        <!--load Socket.io library-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.1/socket.io.js" 
+        integrity="sha512-oF0Co2/3DtjrJG4N27BjSLQWoiBv171sK6a+JiWjp/7agxC2nCUP358AqzxkBUb5jX8g6CYLPdSKQTbC0weCwA=="
+        crossorigin="anonymous"></script>
+        <!--script to recieve and emit events from server -->
+        <script defer src="chat.js"></script>
+
+        <style type="text/css">
+        .other-message{
+            text-align: left;
+            color: red;
+        }
+        .self-message{
+            text-align: right;
+            color: black;
+        }
+        </style>
+    </head>
+
+    <body>
+        <h1>Vim Chat App</h1>
+        <div id="chatContainer"></div>
+        <div class="chatbox">
+            <form id="messageForm">
+                <input type="text" id="messageInput"/>
+                <button type="submit" id="btn">Send</button>
+            </form>
+        </div>
+    </body>
+</html>
